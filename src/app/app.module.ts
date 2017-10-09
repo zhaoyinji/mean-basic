@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+// Import the Http Module and our Data Service
+import { HttpModule } from '@angular/http';
+import { DataService } from './services/data/data.service';
+import { UsersComponent } from './components/users/users.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsersComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
